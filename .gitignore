@@ -1,0 +1,25 @@
+# Node.js modules
+node_modules/
+
+# Next.js build directory
+.next/
+
+# Public directory
+public/
+
+# Log files
+logs/
+*.log
+
+# Package and yarn lock files
+package-lock.json
+yarn.lock
+
+# IntelliJ IDEA files
+.idea/
+
+# CMake files
+cmake-build-*/
+
+# Other IDE-specific files
+.idea_modules/

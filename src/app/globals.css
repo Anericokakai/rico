@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+.debug {
+  border: 1px solid red;
+}
+.codeContainer::-webkit-scrollbar {
+  background-color: #6c6c6c5b;
+  height: 7px;
+  border-radius: 100vw;
+  width: 7px;
+}
+.codeContainer::-webkit-scrollbar-thumb {
+  background: #a0a0a09f;
+  border-radius: 100vw;
+}
+
+/* ###### START OF CUSTOM BORDERS  */
+/* add a shiny border to the existing one  */
+.tip-border {
+  background: linear-gradient(
+    90deg,
+    rgba(56, 189, 248, 0) 0%,
+    rgba(56, 189, 248, 0) 0%,
+    rgba(232, 232, 232, 0.2) 33.02%,
+    rgba(143, 143, 143, 0.67) 64.41%,
+    rgba(236, 72, 153, 0) 98.93%
+  );
+}
+.tip-border-1b {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(143, 143, 143, 0.67) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.gradient-hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    to left,
+    transparent 0%,
+    rgba(114, 125, 161, 0.2) 50%,
+    transparent 100%
+  );
+}
+.divider {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, .4) 50%, rgba(255, 255, 255, 0));
+    height: 1px;
+}
+
+.costs-progress-gradient {
+  background: linear-gradient(92.69deg, #939db8 -84.1%, #3b4154 107.01%);
+}
+
+/*  # ####### END OF CUSTOM BORDERS */
+
+/*  radial gradients to highlight the back ground */
+/* ! The light blue gradient */
+.light-up-a {
+  background-image: radial-gradient(
+    100% 50% at 50% 0%,
+    rgba(0, 163, 255, 0.13) 0%,
+    rgba(0, 163, 255, 0) 50%,
+    rgba(0, 163, 255, 0) 100%
+  );
+}
+/* ! the white Highlight graduent  */
+.light-up-white {
+  background: radial-gradient(
+    70% 80% at center 0%,
+    rgba(255, 255, 255, 0.06) 3%,
+    rgba(98, 255, 179, 0) 70%,
+    rgba(98, 255, 179, 0) 100%
+  );
+}
+
+._404-gradient {
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #fff, #252b32 92%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  align-self: center;
+  max-height: 380px;
+  
+  line-height: 1em;
+}
+
+/*  home gradient general */
+.hero-gradient-bg {
+  background: radial-gradient(
+    ellipse at top,
+    rgba(91, 99, 211, 0.08),
+    transparent 40%
+  );
+}
+/*  light up white but a conical one */
+.light-up-white-conic {
+  background: conic-gradient(
+      from 90deg at 50% 50%,
+      rgba(0, 0, 0, 0) 50%,
+      rgb(0, 0, 0) 50%
+    ),
+    radial-gradient(rgba(200, 200, 200, 0.1) 0%, transparent 80%);
+}
+
+.custom-bg-purple-gradient {
+  background: linear-gradient(0deg, #98a4f7 -3.5%, #dadffc 125%);
+}
+
+.rainbowBorder {
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #02fcef70, #ffb52b70 50%, #a02bfe70);
+  height: 32px;
+  line-height: 0;
+  transition: transform .2s ease-in-out;
+  transform-origin: 0 100%;
+}
+
+/* !button fade from the top to botttom */
+.button-fade-1a {
+  background: linear-gradient(rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0))
+    border-box border-box;
+}
+.fed_div_bottom{
+  background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 100%);
+}
+
+
+.fed-from-upDown {
+  background: linear-gradient(
+    0deg,
+    rgb(0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0) 100%,
+    rgb(0, 0, 0) 100%
+  );
+}
+
+/*  ######## TEXT COLORS  FOR ONLY TEXT  AND HEADERS */
+
+/*  !header font css */
+.font-effect-hero {
+  -webkit-text-stroke: 0.4px #ffffff80;
+  -webkit-text-fill-color: transparent;
+  text-shadow:
+    -1px -1px 0 #ffffff33,
+    1px 1px 0 #0000001a;
+}
+/* ! gradient text from lighter to darker */
+.font-gradient {
+  background: linear-gradient(to right bottom, #fff 30%, #ffffff80);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: unset;
+}
+
+/*  custom purple  gradient text */
+.purple-gradient-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(
+    93.08deg,
+    #98a4f7 7.48%,
+    #8894f7 40.73%,
+    #7c87f7 66.46%
+  );
+}
+
+.white-gradient-text {
+  /* font-variation-settings: "opsz" 30; */
+  /* -webkit-background-clip: text; */
+  background-clip: text;
+  background-image: linear-gradient(165deg, #ffffff 10.57%, #939db8 142.07%),
+    linear-gradient(174.93deg, #ffffff 34.13%, rgba(255, 255, 255, 0) 232.51%);
+  /* letter-spacing: -0.01em; */
+}
+
+/* ####### END OF TEXT COLORS ######## */
+
+/*  #######  FADES BETWEEN  DIV AND TEXT */
+
+/* !Fade two div to avoid seperations */
+.fade-from-bottom {
+  background: linear-gradient(
+    0deg,
+    rgb(0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 20%,
+    rgba(0, 0, 0, 0) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* pop up success  */
+.pop-success {
+  width: 100%;
+  height: 100%;
+  transform: translate3d(0px, 0px, 0px);
+  content-visibility: visible;
+}
+
+.integrations-gradient {
+  background: radial-gradient(250px 800px at left, #000000, transparent),
+    radial-gradient(250px 800px at right, #000000, transparent);
+}
+/*  ####### syNtax Highlight  ######*/
+.token.keyword {
+  color: #6c6c6c;
+}
+.token.punctuation {
+  color: #a0a0a0;
+}
+.token.plain {
+  color: #ebeced;
+}
+.token.string {
+  color: #a1fce8;
+}
+.token.class-name {
+  color: #6c6c6c;
+}
+.token.operator {
+  color: #464a4d;
+}
+
+.slide-bottom-animate {
+  animation: header-animate-down 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+/* header animations */
+
+@keyframes header-animate-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll {
+  animation: scrollLeft 30s linear infinite;
+}
+@keyframes scrollLeft {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: calc((258px + 16px) * var(--item-count));
+  }
+}
