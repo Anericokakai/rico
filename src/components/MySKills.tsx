@@ -9,6 +9,7 @@ function MySKills() {
   const recentProject = [
     {
       title: "Read My Blogs",
+      
       link: "",
       description: `My blogs cover topics such as React, Java, Spring Boot, and
               Node.js, providing insights and tutorials to help you enhance your
@@ -18,6 +19,7 @@ function MySKills() {
     },
     {
       title: "DevLink API Hub ",
+      
       link: "",
       description: `DevLink API Hub offers seamless, easy-to-integrate APIs for front-end
        developers to connect their projects to a robust backend.`,
@@ -27,17 +29,20 @@ function MySKills() {
     {
       title: "WasteWise",
       link: "",
+     
       description: `WasteWise helps households efficiently manage waste by linking 
-      them with nearby collectors, aiming to minimize pollution and promote eco-friendly
-       practices.`,
+      them with nearby collectors, aiming to minimize pollution.`,
       button_name: "join WasteWise",
       image: eco,
     },
   ];
   return (
     <AppLayout>
-      <div className=" font-effect-hero text-4xl sm:text-6xl font-gradient  pb-10">
-        My SKills & Open Source
+      <div className="  text-center tracking-tight leading-[120%] text-4xl sm:text-6xl font-gradient  pb-10">
+        My SKills &{" "}
+        <span className="inline leading-[0] bg-gradient-to-br bg-clip-text text-transparent from-pinkShade-1a via-blueShade-1a to-greenShade-1a">
+          Open Source
+        </span>
       </div>
       <p>
         Get to use Free Open Sourced Api's to integrate with your front end

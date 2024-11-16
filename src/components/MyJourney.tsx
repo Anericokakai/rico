@@ -1,33 +1,49 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { p } from "framer-motion/client";
+import Image from "next/image";
+import jengaHustle from "../../public/jengahustle.png";
+import ams from "../../public/ams.png";
+import gaif from "../../public/gaif.png";
+import html from "../../public/html.png";
+import reactSmall from "../../public/reactSmall.png";
+
 
 function MyJourney() {
   const benefits = [
     {
-      title: "Career Advancement",
-      description:
-        "Enhance your skills and resume through continuous learning and networking.",
+      title: "Worked at AMS East Africa",
+      period: "[2024-present]",
+      img:ams,
+      description: "Created Animal Management System for a startup company ",
     },
     {
-      title: "Community Support",
-      description:
-        "Benefit from a supportive network of like-minded individuals.",
+      title: "Worked at GAiF.ai",
+      period: "[2024-present]",
+      img:gaif,
+      description: "Created a website and a Chat application for a startup company dealing with AI ",
     },
     {
-      title: "Global Exposure",
+      title: "Problem Solving Skills",
+      period: "[2023-end of 2023]",
+      img:jengaHustle,
       description:
-        "Get recognized in the global AI community through collaborations and showcases.",
+        "Started To build real world Application to solve day to day problems.",
     },
     {
-      title: "Innovation Opportunities",
+      title: "Learn frontend & Backend frameworks",
+      period: "[2023-mid 2023]",
+      img:reactSmall,
       description:
-        "Be at the forefront of AI innovation and contribute to groundbreaking projects.",
+        "Understood the components that build react apps and Developed several projects ",
     },
     {
-      title: "Personal Growth",
+      title: "Learn Coding Skills",
+      img:html,
+      period: "[2022-end of 2022]",
       description:
-        "Develop leadership and collaborative skills through active participation.",
+        "Started My Web Development Journey with HTML, CSS, and JavaScript.",
     },
   ];
   return (
@@ -59,14 +75,16 @@ function MyJourney() {
                   : "pl-8 ml-[10%] sm:ml-0 sm:mr-[4.5%] bg-gradient-to-l from-purple-500 to-transparent rounded-2xl border py-2 px-3 border-customSlate "
               }`}
             >
-              <h3 className="text-2xl font-semibold mb-2 text-left text-darkPink">
+              <h3 className="text-xl font-semibold mb-2 text-left text-darkPink">
                 {benefit.title}
               </h3>
-              <p className="text-lightDark">{benefit.description}</p>
+              <p className="text-left">{benefit.period}</p>
+              <p className="text-lightDark text-left">{benefit.description}</p>
             </div>
-            <div className="w-10 h-10   absolute -left-5  sm:left-0   sm:relative bg-black  rounded-full border-4  flex items-center justify-center z-10">
+            <div className="w-10 h-10    absolute -left-5  sm:left-0   sm:relative bg-gradient-to-br from-blueShade-1a via-pinkShade-1a to-blueShade-1a  rounded-full   flex items-center justify-center z-10">
+              <Image src={benefit.img} alt="nothing" className="w-8 h-8 rounded-full" />
               <hr
-                className={`w-[153%] h-2     border-none absolute ${
+                className={`w-[153%] h-2    -z-20   border-none absolute ${
                   index % 2 === 0
                     ? "-right-[153%]  bg-gradient-to-r  rounded-se-full from-purple-400"
                     : " -right-[153%]  sm:-left-[153%] bg-gradient-to-r sm:bg-gradient-to-l from-blue-500"

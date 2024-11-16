@@ -42,7 +42,7 @@ function MyTechStack() {
   return (
     <AppLayout>
       <div className="  max-w-5xl pb-8 pt-10  md:max-w-7xl">
-      <h3 className="  font-styling font-display mb-2 text-center text-[3rem] md:text-[3.5rem] tracking-tight leading-[120%] font-gradient">
+      <h3 className="    mb-2 text-center text-[3rem] md:text-[3.5rem] tracking-tight leading-[120%] font-gradient">
         Tech
         <span className="inline pl-2 leading-[0] bg-gradient-to-br bg-clip-text tracking-tight text-transparent from-[#FFFF92] to-[#EE8912]">Stack</span>
       </h3>
