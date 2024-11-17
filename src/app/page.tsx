@@ -14,14 +14,14 @@ export default function Home() {
   return (
     <main className="bg-black  font-Inter  ">
       <Nav />
-     <HeroSection/>
-     <MySKills/>
-     <MyJourney/>
-      <CodeBlock />
+      <HeroSection />
+      <MySKills />
+      <MyJourney />
       <CustomCard1 />
       <MyTechStack />
+      <CodeBlock />
+      <GetInTouch />
       <Footer />
-      <GetInTouch/>
     </main>
   );
 }

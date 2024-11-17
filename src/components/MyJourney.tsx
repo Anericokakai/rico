@@ -53,8 +53,8 @@ function MyJourney() {
       transition={{ duration: 0.8 }}
       className="mb-16 max-w-7xl mx-auto px-4"
     >
-      <h2 className="text-4xl font-bold mb-12 text-center">
-        <span className="text-darkPurple">Benefits</span>
+      <h2 className="text-4xl sm:text-6xl  my-20 text-center">
+        <span className="text-transparent font-effect-hero font-gradient">My Journey</span>
       </h2>
       <div className="relative text-grayText-1a ">
         <div className="absolute sm:left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-blue-300"></div>
@@ -69,12 +69,14 @@ function MyJourney() {
             }`}
           >
             <div
-              className={`sm:w-[45%]  w-[100%]  ${
+              className={`sm:w-[45%] bg-black  relative w-[100%]  ${
                 index % 2 === 0
-                  ? "text-right pr-8  ml-[10%] sm:ml-[4.5%] border py-2 px-3 rounded-2xl border-customSlate bg-gradient-to-l from-blue-500 to-transparent "
-                  : "pl-8 ml-[10%] sm:ml-0 sm:mr-[4.5%] bg-gradient-to-l from-purple-500 to-transparent rounded-2xl border py-2 px-3 border-customSlate "
+                  ? "text-right pr-8  ml-[10%] sm:ml-[4.5%] border py-2 px-3 rounded-2xl border-customSlate  "
+                  : "pl-8 ml-[10%] sm:ml-0 sm:mr-[4.5%] bg-gradient-to rounded-2xl border py-2 px-3 border-customSlate "
               }`}
             >
+                              <div className="absolute right-1/2 transform translate-x-1/2 top-0 z-10 h-px w-[200px] tip-border"></div>
+                              <div className="absolute w-full rounded-t-2xl  h-full left-0 top-0  bg-gradient-to-b from-grayBg-1b to-transparent"></div>
               <h3 className="text-xl font-semibold mb-2 text-left text-darkPink">
                 {benefit.title}
               </h3>

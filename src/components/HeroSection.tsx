@@ -13,9 +13,7 @@ function HeroSection() {
 
   function app(){
      if(idea.isReady){
-       console.log("One Line Of \n Code at a Time")
-  }
-  }
+       console.log("One Line Of \n Code at a Time")}}
 `;
 
   const [displayedCode, setDisplayedCode] = useState("");
