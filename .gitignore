@@ -4,8 +4,7 @@ node_modules/
 # Next.js build directory
 .next/
 
-# Public directory
-public/
+
 
 # Log files
 logs/
