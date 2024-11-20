@@ -26,7 +26,7 @@ function Nav() {
         <h1 className="font-gradient text-3xl font-effect-hero ">
           Anerico.Dev
         </h1>
-        <ul className=" inline-flex gap-10 font-medium text-base">
+        <ul className=" hidden sm:inline-flex gap-10 font-medium text-base">
           <li>
             <a href="#home">Home</a>
           </li>
