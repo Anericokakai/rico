@@ -9,11 +9,11 @@ import Prism from "prismjs";
 import { FileSymlink, FileTerminal, Phone, PhoneIncoming } from "lucide-react";
 function HeroSection() {
   let fullCode = `
-  import { idea } from 'rico.dev';
+  import { idea } from 'dev';
 
   function app(){
      if(idea.isReady){
-       console.log("One Line Of \n Code at a Time")}}
+       console.log("One Line\n at a Time")}}
 `;
 
   const [displayedCode, setDisplayedCode] = useState("");
@@ -40,7 +40,7 @@ function HeroSection() {
   }, [displayedCode]);
   return (
     <AppLayout>
-      <div className=" d w-full   sm:min-h-[800px]    rounded-2xl  relative  bg-gradient-to-b from-black via-transparent  pt-20 sm:pt-0 to-black backdrop-blur-sm grid xs:place-items-center">
+      <div className="  w-full    sm:min-h-[800px]    rounded-2xl  relative  bg-gradient-to-b from-black via-transparent  pt-20 sm:pt-0 to-black backdrop-blur-sm grid xs:place-items-center">
         <div className="divider absolute top-0 w-full "></div>
         <div className="absolute w-full  h-full top-0 left-0 light-up-white mx-auto px-3"></div>
         <div className=" w-full ">
@@ -52,7 +52,7 @@ function HeroSection() {
               RICO.DEV
             </h1>
           </div>
-          <div className="relative  pt-5 px-3 rounded-2xl  border-t border-customSlate    ">
+          <div className="relative  w-full  pt-5 px-3 rounded-2xl  border-t border-customSlate    ">
             <Image
               src={shadeTop}
               alt="shadeTop"
@@ -82,12 +82,12 @@ function HeroSection() {
                 Crafting scalable solutions
               </h1>
 
-              <pre className="language-javascript  rounded-33xl   w-full sm:text-xl text-left   text-grayText-1a   min-h-[280px] pt-3 relative  ">
+              <pre className="language-javascript  rounded-33xl   w-full sm:text-xl text-left   text-grayText-1a   min-h-[280px] pt-3 relative    ">
                 <div
                   aria-hidden
                   className="fed_div_bottom w-[calc(100%_+_4px)] top-[50%]   h-[calc(20%_+_5px)]  absolute  -left-[.7px]   "
                 ></div>
-                <div className="light-up-white-conic absolute w-[calc(100%_+_1px)] border border-customSlate border-b-0  rounded-t-2xl h-full -top-[9rem] -z-10"></div>
+                <div className="light-up-white-conic absolute w-[calc(100%_+_1px)] text-xs border border-customSlate border-b-0  rounded-t-2xl h-full -top-[9rem] -z-10 "></div>
                 <code dangerouslySetInnerHTML={{ __html: displayedCode }} />
               </pre>
             </div>

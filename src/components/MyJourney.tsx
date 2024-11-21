@@ -51,7 +51,7 @@ function MyJourney() {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="mb-16 max-w-7xl mx-auto px-4"
+      className="mb-16 max-w-7xl  mx-auto px-4 overflow-x-clip"
     >
       <h2 className="text-4xl sm:text-6xl  my-20 text-center">
         <span className="text-transparent font-effect-hero font-gradient">My Journey</span>

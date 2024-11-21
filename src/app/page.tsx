@@ -12,7 +12,7 @@ import MyJourney from "@/components/MyJourney";
 
 export default function Home() {
   return (
-    <main className="bg-black  font-Inter  ">
+    <main className=" bg-black font-Inter   ">
       <Nav />
       <HeroSection />
       <MySKills />

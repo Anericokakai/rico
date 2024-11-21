@@ -48,7 +48,7 @@ function MySKills() {
         Get to use Free Open Sourced Api's to integrate with your front end
         Applications{" "}
       </p>
-      <div className="grid gap-7 sm:grid-cols-2 md:grid-cols-3">
+      <div className="grid gap-7 sm:grid-cols-2 md:grid-cols-3 px-2">
         {recentProject.map((project, i) => (
           <div
             key={i}

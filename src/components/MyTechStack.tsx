@@ -41,12 +41,12 @@ function MyTechStack() {
   ];
   return (
     <AppLayout>
-      <div className="   max-w-5xl pb-8 sm:pb-0 pt-10  md:max-w-7xl">
+      <div className="   overflow-x-clip max-w-5xl pb-8 sm:pb-0 pt-10  md:max-w-7xl">
       <h3 className="    mb-2 text-center text-[3rem] md:text-[3.5rem] tracking-tight leading-[120%] font-gradient">
         Tech
         <span className="inline pl-2 leading-[0] bg-gradient-to-br bg-clip-text tracking-tight text-transparent from-blueShade-1a to-pinkShade-1a">Stack</span>
       </h3>
-        <div className="relative w-full -mx-5 pt-16 flex flex-col lg:flex-row gap-4 lg:overflow-hidden shrink-0 lg:h-[400px] [--item-count:6]">
+        <div className="relative w-full -mx-5 py-16 flex  flex-row gap-4 lg:overflow-hidden shrink-0 lg:h-[400px] [--item-count:6]">
           <div className="absolute  w-screen lg:max-w-7xl h-full bg-gradient-to-tr from-transparent to-black   left-0   z-10 inset-0 integrations-gradient pointer-events-none"></div>
           <div className="flex-1 flex  text-grayText-1a gap-4 scroll transition-all relative">
             <div className="flex   gap-4 space-around">
