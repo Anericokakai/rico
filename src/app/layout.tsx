@@ -18,9 +18,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="overflow-x-hidden bg-black">
+    <html lang="en" suppressHydrationWarning className="overflow-x-hidden">
       <body className={inter.className}>
-        <section className=" px-auto w-full px- bg-black ">{children}</section>
+        <script dangerouslySetInnerHTML={{ __html: `(function(){try{var t=localStorage.getItem('rico-theme');document.documentElement.dataset.theme=t==='light'||t==='dark'?t:matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'}catch(e){}})()` }} />
+        <section className="w-full">{children}</section>
       </body>
     </html>
   );

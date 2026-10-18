@@ -66,7 +66,7 @@ toggleDevMood();
                 </button>
               </div>
             </header>
-            <div className="codeContainer  min-h-[300px] p-4 overflow-auto rounded-xl max-h-[400px]  w-full bg-back-bg light-up-a">
+            <div className="codeContainer  min-h-[300px] p-4 overflow-auto rounded-xl max-h-[400px]  w-full bg-[#05050a] light-up-a">
               <pre className="language-javascript  text-grayText-1b">
                 <code
                   className="language-javascript"

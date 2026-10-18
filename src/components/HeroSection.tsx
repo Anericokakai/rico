@@ -1,10 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import burble from "../../../public/burble.png";
 import Image from "next/image";
 import AppLayout from "@/utils/AppLayout";
 import shadeTop from "../../public/shadeTop.png";
-import lightShadeTop from "../../public/lightShadeTop.png";
 import Prism from "prismjs";
 import { FileSymlink, FileTerminal, Phone, PhoneIncoming } from "lucide-react";
 function HeroSection() {
@@ -17,79 +15,68 @@ function HeroSection() {
 `;
 
   const [displayedCode, setDisplayedCode] = useState("");
-  // console.log(displayedCode)
-
   useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setDisplayedCode(fullCode);
+      return;
+    }
     let index = 0;
     const interval = setInterval(() => {
-      if (index < fullCode.length) {
-        setDisplayedCode((prev: any) => prev + fullCode[index]);
-
-        index++;
-      } else {
-        setDisplayedCode("");
-        index = 0;
-      }
-    }, 100); // Adjust typing speed here
-
-    return () => clearInterval(interval); // Cleanup interval on unmount
+      index = index < fullCode.length + 20 ? index + 1 : 0;
+      setDisplayedCode(fullCode.slice(0, index));
+    }, 100);
+    return () => clearInterval(interval);
   }, [fullCode]);
-  useEffect(() => {
-    // Re-apply syntax highlighting whenever the code changes
-    Prism.highlightAll();
-  }, [displayedCode]);
   return (
     <AppLayout>
-      <div className="  w-full    sm:min-h-[800px]    rounded-2xl  relative  bg-gradient-to-b from-black via-transparent  pt-20 sm:pt-0 to-black backdrop-blur-sm grid xs:place-items-center">
+      <div className="hero-shell w-full sm:min-h-[800px] rounded-2xl relative pt-12 sm:pt-8 grid xs:place-items-center">
         <div className="divider absolute top-0 w-full "></div>
-        <div className="absolute w-full  h-full top-0 left-0 light-up-white mx-auto px-3"></div>
+        <div className="pointer-events-none absolute w-full h-full top-0 left-0 light-up-white mx-auto px-3"></div>
         <div className=" w-full ">
           <div className=" w-full ">
-            <h1 className="font-gradient  pt-7 font-effect-hero text-center text-2xl pb-5">
+            <h1 className="hero-reveal hero-intro font-gradient pt-7 font-effect-hero text-center text-2xl pb-5">
               Cool Tech Stuff By,
             </h1>
-            <h1 className="_404-gradient  text-[4rem] xs:text-[100px] sm:text-[100px] md:text-[200px] text-center ">
+            <h1 className="hero-reveal hero-title _404-gradient text-[clamp(3rem,14vw,11rem)] text-center ">
               RICO.DEV
             </h1>
           </div>
           <div className="relative  w-full  pt-5 px-3 rounded-2xl  border-t border-customSlate    ">
             <Image
               src={shadeTop}
-              alt="shadeTop"
-              className="w-full h-full -z-10 object-cover absolute top-0 right-0 rounded-t-2xl"
+              alt=""
+              className="hero-shade pointer-events-none grayscale w-full h-full -z-10 object-cover absolute top-0 right-0 rounded-t-2xl"
               width={100}
               height={100}
             />
             <div className="absolute left-[50%] transform -translate-x-1/2 top-0   z-10 h-px w-[50%] tip-border"></div>
 
-            <div className="grid gap-3 max-w-2xl mx-auto  sm:grid-cols-2">
-              <button className="border transition-all  group flex items-center justify-center gap-2 hover:text-grayText-1b   relative border-customSlate rounded-full w-full py-3 text-grayText-1a">
+            <div className="hero-reveal hero-buttons grid gap-3 max-w-2xl mx-auto  sm:grid-cols-2">
+              <button type="button" className="hero-button border transition-all  group flex items-center justify-center gap-2 hover:text-grayText-1b   relative border-customSlate rounded-full w-full py-3 text-grayText-1a">
                 <div className="absolute w-full -z-10  h-6 left-0 bg-gradient-to-b from-grayBg-1b to-transparent top-0 rounded-t-full"></div>
-                Resume
+                <span className="button-label"><span>Resume</span><span aria-hidden="true">View resume</span></span>
                 <FileSymlink className="group-hover:hidden" />
                 <FileTerminal className="hidden group-hover:block" />
               </button>
-              <button className="border group flex items-center justify-center gap-2 hover:text-grayText-1b transition-all relative border-customSlate rounded-full w-full py-3 text-grayText-1a ">
-                Get In Touch
+              <button type="button" className="hero-button border group flex items-center justify-center gap-2 hover:text-grayText-1b transition-all relative border-customSlate rounded-full w-full py-3 text-grayText-1a ">
+                <span className="button-label"><span>Get In Touch</span><span aria-hidden="true">Let’s talk</span></span>
                 <Phone className="group-hover:hidden size-5" />
                 <PhoneIncoming className="hidden group-hover:block size-5  animate-pulse" />
                 <div className="absolute w-[100%] -z-10  h-6 left-0 bg-gradient-to-b  from-grayBg-1a to-transparent top-0 rounded-t-full"></div>
               </button>
             </div>
-            <div className="mt-20  max-w-3xl mx-auto ">
+            <div className="hero-reveal hero-editor-wrap mt-16 max-w-3xl mx-auto ">
               <hr className="gradient-hr " />
               <h1 className="text-grayText-1b text-2xl text-center pb-10 pt-3 ">
                 Crafting scalable solutions
               </h1>
 
-              <pre className="language-javascript  rounded-33xl   w-full sm:text-xl text-left   text-grayText-1a   min-h-[280px] pt-3 relative    ">
-                <div
-                  aria-hidden
-                  className="fed_div_bottom w-[calc(100%_+_4px)] top-[50%]   h-[calc(20%_+_5px)]  absolute  -left-[.7px]   "
-                ></div>
-                <div className="light-up-white-conic absolute w-[calc(100%_+_1px)] text-xs border border-customSlate border-b-0  rounded-t-2xl h-full -top-[9rem] -z-10 "></div>
-                <code dangerouslySetInnerHTML={{ __html: displayedCode }} />
-              </pre>
+              <div className="hero-editor">
+                <div className="editor-toolbar" aria-hidden="true"><span /><span /><span /><small>idea.js</small></div>
+                <pre className="language-javascript text-sm sm:text-xl min-h-[240px] p-4 sm:p-6">
+                  <code dangerouslySetInnerHTML={{ __html: Prism.highlight(displayedCode, Prism.languages.javascript, "javascript") }} />
+                </pre>
+              </div>
             </div>
           </div>
         </div>

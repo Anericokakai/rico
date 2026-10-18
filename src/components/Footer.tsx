@@ -8,7 +8,7 @@ import Linkedin from "@/icons/Linkedin";
 
 function Footer() {
   return (
-    <footer>
+    <footer className="flex justify-center items-center">
         <div className="flex gap-4">
       <Link
         href=""

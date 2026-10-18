@@ -1,48 +1,40 @@
-'use client';
+"use client";
+
+import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 
+export default function Nav() {
+  const [light, setLight] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-function Nav() {
-  const [showNav, setShowNav] = useState<boolean>(false);
-  const handleNavShow = () => {
-    if (window.scrollY > 20) {
-      setShowNav(true);
-    } else {
-      setShowNav(false);
-    }
-  };
   useEffect(() => {
-    document.addEventListener("scroll", handleNavShow);
-    return () => document.addEventListener("scroll", handleNavShow);
+    setLight(document.documentElement.dataset.theme === "light");
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  function toggleTheme() {
+    const next = !light;
+    document.documentElement.dataset.theme = next ? "light" : "dark";
+    setLight(next);
+    try { localStorage.setItem("rico-theme", next ? "light" : "dark"); } catch {}
+  }
+
   return (
-    <nav
-      className={` text-grayText-1a w-full px-2 py-4 ${
-        showNav ? " bg-black/60 backdrop-blur-sm sticky top-0 z-50   transition ease-in-out duration-200 slide-bottom-animate" : " bg-transparent"
-      }`}
-    >
-      <div className='divider absolute bottom-0 w-full '></div>
-      <div className="  flex items-center justify-between w-full">
-        <h1 className="font-gradient text-3xl font-effect-hero ">
-          Anerico.Dev
-        </h1>
-        <ul className=" hidden sm:inline-flex gap-10 font-medium text-base">
-          <li>
-            <a href="#home">Home</a>
-          </li>
-          <li>
-            <a href="#projects">Projects</a>
-          </li>
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
+    <nav aria-label="Main navigation" className={`site-nav${scrolled ? " is-scrolled" : ""}`}>
+      <div className="nav-inner">
+        <a className="nav-brand" href="#home" aria-label="Rico.dev home">RICO<span>.DEV</span></a>
+        <div className="nav-actions">
+          <a href="#home" aria-current="page" className="nav-home"><span aria-hidden="true" />Home</a>
+          <button type="button" onClick={toggleTheme} className="theme-toggle"
+            aria-label={light ? "Switch to dark theme" : "Switch to light theme"}>
+            <Sun aria-hidden="true" className="theme-sun" />
+            <Moon aria-hidden="true" className="theme-moon" />
+          </button>
+        </div>
       </div>
     </nav>
   );
 }
-
-export default Nav;

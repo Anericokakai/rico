@@ -44,7 +44,7 @@ function MySKills() {
           Open Source
         </span>
       </div>
-      <p>
+      <p className="text-center text-neutral-400 mb-8">
         Get to use Free Open Sourced Api's to integrate with your front end
         Applications{" "}
       </p>
@@ -52,7 +52,7 @@ function MySKills() {
         {recentProject.map((project, i) => (
           <div
             key={i}
-            className="min-h-[300px]  sm:max-h-[450px]  grid  grid-rows-2  border border-customSlate rounded-2xl border-b-0 relative"
+            className="min-h-[300px]    grid  grid-rows-[auto_1fr]  border border-customSlate rounded-2xl border-b-0 relative"
           >
             <div className="absolute light-up-white w-full h-full"></div>
             <div className="absolute w-[200px] tip-border-1b  top-0 left-[50%] h-px transform -translate-x-1/2"></div>
@@ -64,7 +64,7 @@ function MySKills() {
               <Image
                 src={project.image}
                 alt="codefree"
-                className="rounded-t-2xl  max-h-[300px] w-full object-cover"
+                className="grayscale rounded-t-2xl aspect-video w-full object-cover"
               />
             </div>
             <div className="relative px-2   col-span-2   pb-2 w-full h-full   text-grayText-1a z-10 ">

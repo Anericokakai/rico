@@ -46,37 +46,13 @@ function MyTechStack() {
         Tech
         <span className="inline pl-2 leading-[0] bg-gradient-to-br bg-clip-text tracking-tight text-transparent from-blueShade-1a to-pinkShade-1a">Stack</span>
       </h3>
-        <div className="relative w-full -mx-5 py-16 flex  flex-row gap-4 lg:overflow-hidden shrink-0 lg:h-[400px] [--item-count:6]">
-          <div className="absolute  w-screen lg:max-w-7xl h-full bg-gradient-to-tr from-transparent to-black   left-0   z-10 inset-0 integrations-gradient pointer-events-none"></div>
-          <div className="flex-1 flex  text-grayText-1a gap-4 scroll transition-all relative">
-            <div className="flex   gap-4 space-around">
-              {Technologies.map((item, i) => (
-                <a
-                key={i}
-                  href=""
-                  className="p-4 relative  rounded-xl border bg-[#727DA1]/10 hover:bg-[#727DA1]/15 border-customSlate w-[258px] h-[119px]"
-                >
-                            <div className="absolute right-0 top-0 z-10 h-px w-[100px] tip-border"></div>
-                            <div className="absolute bottom-0 left-0 z-10 h-px w-[100px] tip-border"></div>
-                  <div className="">{item.icon}</div>
-                  <p>{item.name}</p>
-                </a>
-              ))}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 py-8">
+          {Technologies.map((item) => (
+            <div key={item.name} className="min-w-0 rounded-xl border border-customSlate bg-neutral-900 p-4 text-grayText-1a">
+              <div className="grayscale mb-3">{item.icon}</div>
+              <p>{item.name}</p>
             </div>
-            <div aria-hidden className="flex  gap-4 space-around">
-            {Technologies.map((item, i) => (
-                <a
-                  href=""
-                  className="p-4 relative rounded-xl border bg-[#727DA1]/10 hover:bg-[#727DA1]/15 border-customSlate w-[258px] h-[119px]"
-                >
-                            <div className="absolute right-0 top-0 z-10 h-px w-[100px] tip-border"></div>
-                            <div className="absolute bottom-0 left-0 z-10 h-px w-[100px] tip-border"></div>
-                  <div className="">{item.icon}</div>
-                  <p>{item.name}</p>
-                </a>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </AppLayout>

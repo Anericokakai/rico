@@ -56,8 +56,8 @@ function MyJourney() {
       <h2 className="text-4xl sm:text-6xl  my-20 text-center">
         <span className="text-transparent font-effect-hero font-gradient">My Journey</span>
       </h2>
-      <div className="relative text-grayText-1a ">
-        <div className="absolute sm:left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-blue-300"></div>
+      <div className="relative ml-5 sm:ml-0 text-grayText-1a ">
+        <div className="absolute sm:left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-neutral-500 to-neutral-300"></div>
         {benefits.map((benefit, index) => (
           <motion.div
             key={index}
@@ -77,19 +77,19 @@ function MyJourney() {
             >
                               <div className="absolute right-1/2 transform translate-x-1/2 top-0 z-10 h-px w-[200px] tip-border"></div>
                               <div className="absolute w-full rounded-t-2xl  h-full left-0 top-0  bg-gradient-to-b from-grayBg-1b to-transparent"></div>
-              <h3 className="text-xl font-semibold mb-2 text-left text-darkPink">
+              <h3 className="text-xl font-semibold mb-2 text-left text-neutral-200">
                 {benefit.title}
               </h3>
               <p className="text-left">{benefit.period}</p>
-              <p className="text-lightDark text-left">{benefit.description}</p>
+              <p className="text-neutral-400 text-left">{benefit.description}</p>
             </div>
-            <div className="w-10 h-10    absolute -left-5  sm:left-0   sm:relative bg-gradient-to-br from-blueShade-1a via-pinkShade-1a to-blueShade-1a  rounded-full   flex items-center justify-center z-10">
+            <div className="grayscale w-10 h-10 shrink-0 absolute -left-5  sm:left-0   sm:relative bg-gradient-to-br from-blueShade-1a via-pinkShade-1a to-blueShade-1a  rounded-full   flex items-center justify-center z-10">
               <Image src={benefit.img} alt="nothing" className="w-8 h-8 rounded-full" />
               <hr
                 className={`w-[153%] h-2    -z-20   border-none absolute ${
                   index % 2 === 0
-                    ? "-right-[153%]  bg-gradient-to-r  rounded-se-full from-purple-400"
-                    : " -right-[153%]  sm:-left-[153%] bg-gradient-to-r sm:bg-gradient-to-l from-blue-500"
+                    ? "-right-[153%]  bg-gradient-to-r  rounded-se-full from-neutral-400"
+                    : " -right-[153%]  sm:-left-[153%] bg-gradient-to-r sm:bg-gradient-to-l from-neutral-500"
                 } `}
               />
             </div>
